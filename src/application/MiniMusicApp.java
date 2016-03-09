@@ -2,11 +2,11 @@ package application;
 
 import javax.sound.midi.*;
 
-public class MiniMiniMusicApp {
+public class MiniMusicApp {
 	
 	public static void main(String[] args) {
 		
-		MiniMiniMusicApp mini = new MiniMiniMusicApp();
+		MiniMusicApp mini = new MiniMusicApp();
 		mini.play();
 	}
 
@@ -47,7 +47,6 @@ public class MiniMiniMusicApp {
 				track.add(medNoteOff);
 				
 				if (i % 2 != 1) {
-					System.out.println("even measure");
 					
 					highNoteStart.setMessage(144, 1, 70, 100);
 					highNoteEnd.setMessage(128, 1, 70, 100);
