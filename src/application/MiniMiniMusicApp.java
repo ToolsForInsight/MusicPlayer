@@ -21,9 +21,11 @@ public class MiniMiniMusicApp {
 			Track track = seq.createTrack();
 			
 			ShortMessage a = new ShortMessage();
+			// below says "start playing, channel 1 (piano), note 44 (middle C), 
+			// at velocity (howfast/hard press) 100"
 			a.setMessage(144, 1, 44, 100);
-			MidiEvent noteOn = new MidiEvent(a, 1);
-			track.add(noteOn);
+			MidiEvent noteOn = new MidiEvent(a, 1); // says "do event a at beat 1"
+			track.add(noteOn); // add the noteOn event to the track
 			
 			ShortMessage b = new ShortMessage();
 			b.setMessage(128, 1, 44, 100);
