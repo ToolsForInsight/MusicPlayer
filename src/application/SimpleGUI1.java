@@ -8,6 +8,7 @@ import java.awt.event.*;
 
 public class SimpleGUI1 implements ActionListener {
 	
+	JFrame frame;
 	JButton button;
 	MyDrawPanel myPanel;
 
@@ -19,11 +20,11 @@ public class SimpleGUI1 implements ActionListener {
 	
 	public void go() {
 		
-		JFrame frame = new JFrame();
+		frame = new JFrame();
 		frame.setSize(300,300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // quit app upon close window
 		
-		button = new JButton("click me");
+		button = new JButton("Click me to change the above color gradient");
 		frame.getContentPane().add(button);
 		button.addActionListener(this);
 		button.setBounds(0, 150, 300, 130);
@@ -37,6 +38,6 @@ public class SimpleGUI1 implements ActionListener {
 	
 	public void actionPerformed(ActionEvent event) {
 		
-		button.setText("I've been clicked!");
+		frame.repaint();
 	}
 }
