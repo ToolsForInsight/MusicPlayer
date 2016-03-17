@@ -2,6 +2,7 @@ package application;
 
 import javax.swing.*;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.*;
@@ -21,16 +22,15 @@ public class SimpleGUI1 implements ActionListener {
 	public void go() {
 		
 		frame = new JFrame();
-		frame.setSize(300,300);
+		frame.setSize(500,500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // quit app upon close window
 		
 		button = new JButton("Click me to change the above color gradient");
-		frame.getContentPane().add(button);
+		frame.getContentPane().add(BorderLayout.SOUTH, button);
 		button.addActionListener(this);
-		button.setBounds(0, 150, 300, 130);
 		
 		myPanel = new MyDrawPanel();
-		frame.getContentPane().add(myPanel);
+		frame.getContentPane().add(BorderLayout.CENTER, myPanel);
 		
 		frame.setVisible(true);
 		frame.repaint();
